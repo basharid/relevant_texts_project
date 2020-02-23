@@ -66,4 +66,42 @@ def relevant_word(input_text1, input_text2):
         l2.remove(temp)
         l1.remove(la)
 
+    for iw in irrelevant_words:
+        input_text2 = input_text2.replace(iw, " ")
+
+    word_list2 = input_text2.split(" ")
+
+    word_histogram2 = {
+    }
+
+    for word1 in word_list2:
+        if word1 not in word_histogram2.keys():
+            word_histogram2[word1] = 1
+        else:
+            word_histogram2[word1] = word_histogram2[word1] + 1
+
+    word_histogram2.pop("")
+
+    r1 = list(word_histogram2.values())
+
+    La1 = []
+
+    for i in range(6):
+        m1 = max(r1)
+        La1.append(m1)
+        r1.remove(m1)
+
+    l11 = list(word_histogram2.values())
+
+    l21 = list(word_histogram2.keys())
+
+    used_word2 = []
+
+    for la1 in La1:
+        temp1 = l21[l11.index(la1)]
+        used_word2.append(temp1)
+        l21.remove(temp1)
+        l11.remove(la1)
+        
+
 
