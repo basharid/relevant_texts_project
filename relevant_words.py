@@ -49,6 +49,8 @@ def relevant_word(input_text1, input_text2):
 
     r = list(word_histogram1.values())
 
+    La =[]
+
     for i in range(6):
         m = max(r)
         La.append(m)
@@ -110,4 +112,8 @@ def relevant_word(input_text1, input_text2):
     return result
 
 
+# main program
+print("relevante words between two texts :")
+words = relevant_word(input_tex1, input_tex2)
+print(words)
 
