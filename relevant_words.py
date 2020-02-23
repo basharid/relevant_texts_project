@@ -102,6 +102,12 @@ def relevant_word(input_text1, input_text2):
         used_word2.append(temp1)
         l21.remove(temp1)
         l11.remove(la1)
-        
+
+    set_word1 = set(used_word1)
+    set_word2 = set(used_word2)
+
+    result = set_word1.intersection(set_word2)
+    return result
+
 
 
