@@ -49,4 +49,21 @@ def relevant_word(input_text1, input_text2):
 
     r = list(word_histogram1.values())
 
+    for i in range(6):
+        m = max(r)
+        La.append(m)
+        r.remove(m)
+
+    l1 = list(word_histogram1.values())
+
+    l2 = list(word_histogram1.keys())
+
+    used_word1 = []
+
+    for la in La:
+        temp = l2[l1.index(la)]
+        used_word1.append(temp)
+        l2.remove(temp)
+        l1.remove(la)
+
 
