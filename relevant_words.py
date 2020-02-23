@@ -30,4 +30,10 @@ def relevant_word(input_text1, input_text2):
                         " just ", " an "
         , " al ", " said", " get ", " we've ", " ms ", " now", "the ", " around ", ": ", " 'you're ", "\'", " re ",
                         "s "}
+
+    for iw in irrelevant_words:
+        input_text1 = input_text1.replace(iw, " ")
+
+    word_list1 = input_text1.split(" ")
     
+
