@@ -7,4 +7,27 @@ input_tex2 = """The Russian Soyuz spacecraft carrying Koch parachuted down to th
 def relevant_word(input_text1, input_text2):
     input_text1 = input_text1.lower()
     input_text2 = input_text2.lower()
+    irrelevant_words = {".", ",", "\n", " the ", " a ", " and ", "\"", " once ", " after", "-",
+                        " is ", " was ", " he ", " at ", " to ", " for ", " can ", " of ",
+                        " in ", " her ", " on ", " will ", " into ", " - ", " or ", " with ", " itself ",
+                        " not ", " as ", " when ", " where ", " by ", " we ", " are ", " were ", " however ", " while ",
+                        " over",
+                        " may ", " she ", " it ", " which ", " that ", " very ", " also ", " its ", " how ", " do ",
+                        " does ", " i'm ",
+                        " who ", " have ", " since ", " off ", " let ", " we're ", " been ", " it's ", " what ",
+                        " much ", " really ",
+                        " many ", " more ", " all ", " there ", " alone ", " our ", " these ", " back ", " then ",
+                        " seem ", " like ",
+                        " us ", " from ", " i ", " one ", " else ", " same ", " almost ", " those ", " so ", " any ",
+                        " them ", " their ",
+                        " about ", " some ", " long ", " other ", " your ", " done ", " you ", " me ", "'s",
+                        " because ", " whoever ",
+                        " few ", " than ", " whole ", " but ", " they're ", " be ", " they ", " each ", " before ",
+                        " it ", " [", "] ",
+                        " doesn't ", "  ", " soon ", " here ", " ... ", " themselves", " this ", " up ", " being ",
+                        " doing ",
+                        " having ", " my ", " down ", " would ", " even ", " haven't ", " far ", " had ", " away ",
+                        " just ", " an "
+        , " al ", " said", " get ", " we've ", " ms ", " now", "the ", " around ", ": ", " 'you're ", "\'", " re ",
+                        "s "}
     
