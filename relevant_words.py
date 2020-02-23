@@ -35,5 +35,18 @@ def relevant_word(input_text1, input_text2):
         input_text1 = input_text1.replace(iw, " ")
 
     word_list1 = input_text1.split(" ")
-    
+
+    word_histogram1 = {
+    }
+
+    for word in word_list1:
+        if word not in word_histogram1.keys():
+            word_histogram1[word] = 1
+        else:
+            word_histogram1[word] = word_histogram1[word] + 1
+
+    word_histogram1.pop("")
+
+    r = list(word_histogram1.values())
+
 
